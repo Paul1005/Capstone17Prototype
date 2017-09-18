@@ -461,7 +461,8 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   cloudProjectId: d3a6ba3e-e506-4e5c-8016-d1deb132c534
   projectName: Capstone_Prototype
   organizationId: kdw313
