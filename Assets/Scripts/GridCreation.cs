@@ -21,14 +21,21 @@ public class GridCreation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		InitiateWorld ();
 		CreateGrid ();
 	}
 
 	void CreateGrid(){
+		GameObject text = new GameObject();
+		TextMesh t = text.AddComponent<TextMesh>();
+		t.text = "1";
+		t.fontSize = 30;
+
+
+
 		for(int x = 0; x < Size.x; x++){
 			for(int z = 0; z < Size.z; z++){
 				Instantiate(CellPrefab, new Vector3(x, 0, 0), Quaternion.identity);
 			}
 		}
 	}
+}
