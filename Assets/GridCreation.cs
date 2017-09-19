@@ -16,10 +16,11 @@ using UnityEngine;
  **/
 public class GridCreation : MonoBehaviour {
 
-	public Transform CellPrefab;
-	public Vector3 Size;
-	public int GridWidth;
-	public int GridHeight;
+	public Transform cellPrefab;
+	public Vector3 size;
+	public Random randZone;
+//	public int gridWidth;
+//	public int gridHeight;
 
 	// Use this for initialization
 	void Start () {
@@ -27,20 +28,27 @@ public class GridCreation : MonoBehaviour {
 	}
 
 	void CreateGrid(){
-//		GameObject text = new GameObject();
-//		TextMesh t = text.AddComponent<TextMesh>();
-//		t.text = "1";
-//		t.fontSize = 30;
 
-		Debug.Log (CellPrefab.localScale.x +", " + CellPrefab.localScale.z);
+		Debug.Log (cellPrefab.localScale.x +", " + cellPrefab.localScale.z);
 
-		for(int x = 0; x < Size.x; x++){
-			for(int z = 0; z < Size.z; z++){
-				Instantiate(CellPrefab, new Vector3(x + CellPrefab.localScale.x*x,
+		for(int x = 0; x < size.x; x++){
+			for(int z = 0; z < size.z; z++){
+				Instantiate(cellPrefab, new Vector3(x + cellPrefab.localScale.x * x,
 													0,
-													z+CellPrefab.localScale.z*z),
+													z+cellPrefab.localScale.z * z),
 													Quaternion.identity);
+				
+				//getting random number for zone( its temporally used for prototype)
+				cellPrefab.GetChild (0).GetComponent<TextMesh> ().text = (Random.Range (0, 4)).ToString();
+
+				cellPrefab.GetChild (1).GetComponent<TextMesh> ().text = "(" + x + ", " + z + ")";
+
+
+				//set color index to GridColor to color the grid
+				cellPrefab.GetComponent<GridColor> ().colorIndex = int.Parse(cellPrefab.GetChild (0).GetComponent<TextMesh> ().text);
+
 			}
 		}
 	}
+
 }

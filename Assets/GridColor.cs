@@ -9,17 +9,38 @@ using UnityEngine;
  * Date(Cr): 	2017-09-18
  * Date(Mo):	2017-09-18 
  * Reference:
- * https://gamedev.stackexchange.com/questions/134000/unity-2d-coordinates
+ * https://docs.unity3d.com/ScriptReference/Material-color.html
  **/
 public class GridColor : MonoBehaviour {
-	private Color[] Colors = new Color[4] { Color.red, Color.blue, Color.green, Color.yellow };
-	public int index;
+	
+//	public Color colorStart = Color.red;
+//	public Color colorEnd = Color.green;
+//	public float duration = 1.0F;
+//	public float minRange = 1.0f;
+//	public float maxRange = 2.0f;
 
-	void Awake()
-	{
-		index = Random.Range(0, Colors.Length);
-		var spriteRenderer = GetComponent<SpriteRenderer>();
-		spriteRenderer.color = Colors[index];
+	public Renderer rend;	
+	public int colorIndex = 0;
+
+	public Color32[] colors = {
+		Color.grey,
+		Color.red,
+		Color.yellow,
+		Color.green
+	};
+
+
+	void Start() {
+		
+		rend = GetComponent<Renderer>();
 	}
+//for fun
+//	void Update() {
+//		float lerp = Mathf.PingPong(Time.time, duration) / Random.Range (minRange, maxRange);
+//		rend.material.color = Color.Lerp(colorStart, colorEnd, lerp);
+//	}
 
+	void Update(){
+		rend.material.color = colors [colorIndex];
+	}
 }
