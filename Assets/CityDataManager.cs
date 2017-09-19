@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * 	Not used 
+ **/
 public class CityDataManager : MonoBehaviour {
 
 	public int population = 1000;

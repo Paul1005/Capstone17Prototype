@@ -27,15 +27,18 @@ public class GridCreation : MonoBehaviour {
 		CreateGrid ();
 	}
 
+	/**
+	 * Creates grid and put zone, coordinate
+	 **/
 	void CreateGrid(){
 
 		Debug.Log (cellPrefab.localScale.x +", " + cellPrefab.localScale.z);
 
 		for(int x = 0; x < size.x; x++){
 			for(int z = 0; z < size.z; z++){
-				Instantiate(cellPrefab, new Vector3(x + cellPrefab.localScale.x * x,
+				Instantiate(cellPrefab, new Vector3(x + (cellPrefab.localScale.x * x)*10,
 													0,
-													z+cellPrefab.localScale.z * z),
+													z + (cellPrefab.localScale.z * z)*10),
 													Quaternion.identity);
 				
 				//getting random number for zone( its temporally used for prototype)

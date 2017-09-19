@@ -13,16 +13,17 @@ using UnityEngine;
  **/
 public class GridColor : MonoBehaviour {
 	
-//	public Color colorStart = Color.red;
+	//	public Color colorStart = Color.red;
 //	public Color colorEnd = Color.green;
 //	public float duration = 1.0F;
 //	public float minRange = 1.0f;
 //	public float maxRange = 2.0f;
 
-	public Renderer rend;	
-	public int colorIndex = 0;
+	public Renderer rend;				// renderer object for coloring
+	public int colorIndex = 0;			// index of color of itself
 
-	public Color32[] colors = {
+
+	public Color32[] colors = {			// the set of color gonna be use
 		Color.grey,
 		Color.red,
 		Color.yellow,
@@ -30,17 +31,25 @@ public class GridColor : MonoBehaviour {
 	};
 
 
+	/**
+	 * 
+	 **/
 	void Start() {
-		
-		rend = GetComponent<Renderer>();
+
+		// renderer reference to itself
+		rend = GetComponent<Renderer>(); 
 	}
-//for fun
+
+	//for fun
 //	void Update() {
 //		float lerp = Mathf.PingPong(Time.time, duration) / Random.Range (minRange, maxRange);
 //		rend.material.color = Color.Lerp(colorStart, colorEnd, lerp);
 //	}
 
+
 	void Update(){
+
+		//update color based on the index
 		rend.material.color = colors [colorIndex];
 	}
 }
