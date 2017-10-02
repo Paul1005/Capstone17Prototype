@@ -7,7 +7,7 @@
 # Default behavior is to never overwrite files
 Capstone_Prototype.sln: modified
 Capstone_Prototype\App.cs: 94F8537FCB803D14013F63696E39A981
-Capstone_Prototype\Capstone_Prototype.csproj: 4DB3BA87D435C3607411AA691BDFA7BE
+Capstone_Prototype\Capstone_Prototype.csproj: 47409D8A2953B7549AAF3069893DD348
 Capstone_Prototype\Capstone_Prototype.csproj.user: modified
 Capstone_Prototype\Package.appxmanifest: 7349222C3A1FEB70705CEA6F75847435
 Capstone_Prototype\project.json: 1D02BC64BAC0D041019673A1C4C51737
