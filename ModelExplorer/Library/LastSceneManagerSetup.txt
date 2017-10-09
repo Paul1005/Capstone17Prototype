@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/Paul/Documents/GitHub/Capstone17Prototype/Assets/Scenes/hololens_scene.unity
+  isLoaded: 1
+  isActive: 1
