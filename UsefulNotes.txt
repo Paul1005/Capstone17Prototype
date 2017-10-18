@@ -1,0 +1,38 @@
+Hololens prototype notes
+Objects
+	Cursor:
+		Scripts:
+			Cursor Manger
+			Cursor Feedback
+	Manager:
+		Scripts:
+			Interactible Manager
+			Gaze Stabilizer
+			Gesture Manager
+			Gaze Manager
+			Hands Manager
+			Hand Guidance
+	Plane"
+		Scripts:
+			Interactible
+			Gesture Action
+			Expand Model(not needed, but mentioned in another script)
+			Gaze Gesture manager
+			Tap to place
+		Children:
+			GameObject
+				Text Mesh
+				Scripts:
+					Billboard (keeps it facing us)
+			Cube
+				Scripts: 
+					Interactible
+					Expand Model (not needed, but mentioned in another script)
+	Spacial Mapping:
+	
+New scripts
+	Tap to place (based on tap to place parent, modified to differentiate a rotation from a placing tap)
+	
+Modified Scripts
+	Interactible (to include text mesh functionality)
+	
