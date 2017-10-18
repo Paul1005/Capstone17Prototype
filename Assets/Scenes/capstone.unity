@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 1066964170}
   - component: {fileID: 1066964171}
   - component: {fileID: 1066964172}
+  - component: {fileID: 1066964173}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -504,6 +505,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eebf879c022e4a42a3113a60b226a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1066964173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1066964164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5412ee71fbbc08849bc0d80c0b164844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1144368263
 Prefab:
   m_ObjectHideFlags: 0
@@ -598,21 +610,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c64dcdb3dd75464794d8eb62b657a18, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1462291095 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 196258, guid: dcfff29e15ef0304dbfabcb30a37ad97, type: 2}
-  m_PrefabInternal: {fileID: 2030258809}
---- !u!114 &1462291099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1462291095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53030c7a32abf6048af17aed3ec5e974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1522915753
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,7 +762,6 @@ GameObject:
   - component: {fileID: 1682839485}
   - component: {fileID: 1682839491}
   - component: {fileID: 1682839492}
-  - component: {fileID: 1682839490}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -850,17 +846,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFeedbackSound: {fileID: 0}
---- !u!114 &1682839490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1682839484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78904a6eb610da34fb5b9e6c94b3cb69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1682839491
 MonoBehaviour:
   m_ObjectHideFlags: 0
